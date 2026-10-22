@@ -4,6 +4,8 @@ Plugin de Vencord que muestra un **historial de quién entra y sale del canal de
 
 El historial aparece como una barrita semitransparente justo debajo de la lista de personas del canal de voz, en la barra lateral. Plegada muestra un resumen; al pasar el ratón se despliega con cada persona.
 
+Funciona en la aplicación de escritorio de Discord con **Vencord** o con **BetterDiscord** (ver [Versión para BetterDiscord](#versión-para-betterdiscord)).
+
 ## Índice
 1. [Cómo funciona](#cómo-funciona)
 2. [Limitaciones](#limitaciones)
@@ -13,8 +15,9 @@ El historial aparece como una barrita semitransparente justo debajo de la lista 
 6. [Actualizar](#actualizar)
 7. [Desinstalar](#desinstalar)
 8. [Problemas frecuentes](#problemas-frecuentes)
-9. [Estructura del repositorio](#estructura-del-repositorio)
-10. [Aviso](#aviso)
+9. [Versión para BetterDiscord](#versión-para-betterdiscord)
+10. [Estructura del repositorio](#estructura-del-repositorio)
+11. [Aviso](#aviso)
 
 ## Cómo funciona
 Discord avisa a tu cliente cada vez que alguien entra o sale de un canal de voz. Mientras tú estás en un canal, el plugin anota esos movimientos:
@@ -126,17 +129,37 @@ Para actualizar solo este plugin, vuelve a copiar la carpeta `voiceLog` a `src/u
 - **El plugin está activado pero no se ve la barrita:** solo aparece en el canal de voz en el que estás conectado. Si aun así no sale, Discord puede haber cambiado esa parte de su interfaz. Abre un *issue* en este repositorio.
 - **Error de compilación en `pnpm build`:** Vencord cambia con frecuencia. Si una actualización rompe el plugin, abre un *issue* con el mensaje de error.
 
+## Versión para BetterDiscord
+BetterDiscord es otro mod de Discord. Allí los plugins son un único archivo que se copia a una carpeta, sin compilar nada.
+
+Funciona igual que la versión de Vencord: la misma barrita debajo del canal de voz, que se despliega al pasar el ratón y abre el perfil al hacer clic.
+
+### Instalación
+1. Instala [BetterDiscord](https://betterdiscord.app) si no lo tienes.
+2. Descarga el archivo [`betterdiscord/VoiceLog.plugin.js`](betterdiscord/VoiceLog.plugin.js) de este repositorio (ábrelo y pulsa el botón de descarga, **Download raw file**).
+3. En Discord, ve a **Ajustes de usuario → BetterDiscord → Plugins** y pulsa **Open Plugins Folder**.
+4. Copia `VoiceLog.plugin.js` en esa carpeta.
+5. Vuelve a la lista de plugins y activa **VoiceLog**.
+
+Para actualizarlo, sustituye el archivo por la versión nueva. Para desinstalarlo, desactívalo o borra el archivo de la carpeta de plugins.
+
+Se aplican las mismas [limitaciones](#limitaciones): solo registra mientras estás en el canal y el historial se borra al cambiar de canal o cerrar Discord.
+
+No uses Vencord y BetterDiscord a la vez: instala solo uno de los dos.
+
 ## Estructura del repositorio
 ```
 vencord-voicelog/
 ├── voiceLog/
-│   ├── index.tsx     # plugin para Vencord
-│   └── styles.css    # estilos de la barrita
+│   ├── index.tsx             # plugin para Vencord
+│   └── styles.css            # estilos de la barrita
+├── betterdiscord/
+│   └── VoiceLog.plugin.js    # plugin para BetterDiscord
 ├── .gitignore
 └── README.md
 ```
 
 ## Aviso
-Los mods de cliente como Vencord van contra los Términos de Servicio de Discord. En la práctica rara vez se sanciona su uso, pero el riesgo existe. Este plugin solo lee datos que Discord ya envía a tu cliente y no automatiza ninguna acción. Úsalo bajo tu propia responsabilidad.
+Los mods de cliente como Vencord y BetterDiscord van contra los Términos de Servicio de Discord. En la práctica rara vez se sanciona su uso, pero el riesgo existe. Este plugin solo lee datos que Discord ya envía a tu cliente y no automatiza ninguna acción. Úsalo bajo tu propia responsabilidad.
 
 Autor: **cancercocaine** (Discord) · [ccrccne](https://github.com/ccrccne) (GitHub)
