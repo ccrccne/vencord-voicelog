@@ -1,0 +1,78 @@
+/* Barrita debajo del canal de voz en la barra lateral */
+.vc-voicelog-side {
+    margin: 2px 8px 4px 36px;
+    padding: 3px 6px;
+    border-radius: 6px;
+    background: color-mix(in srgb, var(--background-modifier-hover) 60%, transparent);
+    opacity: 0.45;
+    transition: opacity 0.15s;
+    font-size: 11px;
+    line-height: 16px;
+    color: var(--channels-default, var(--text-muted));
+}
+
+.vc-voicelog-side:hover {
+    opacity: 1;
+}
+
+.vc-voicelog-side-summary {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Plegada: la lista se oculta y se despliega al pasar el ratón */
+.vc-voicelog-side-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+}
+
+.vc-voicelog-side:hover .vc-voicelog-side-list {
+    max-height: 220px;
+    overflow-y: auto;
+    margin-top: 3px;
+}
+
+.vc-voicelog-side-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 1px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.vc-voicelog-side-row:hover {
+    background: var(--background-modifier-hover);
+    color: var(--interactive-hover);
+}
+
+.vc-voicelog-quick {
+    background: color-mix(in srgb, var(--status-warning) 12%, transparent);
+}
+
+.vc-voicelog-side-avatar {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.vc-voicelog-side-name {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.vc-voicelog-side-time {
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.vc-voicelog-side-empty {
+    font-style: italic;
+    padding: 1px 2px;
+}
