@@ -1,10 +1,10 @@
-# VoiceLog para Vencord
+# VoiceLog
 
-Plugin de Vencord que muestra un **historial de quién entra y sale del canal de voz** en el que estás, con la hora. Sirve para saber quién era esa persona que entró un segundo y se fue.
+¿Alguien se metió a tu llamada, estuvo dos segundos y se fue sin decir nada? Con esto sabes quién fue.
 
-El historial aparece como una barrita semitransparente justo debajo de la lista de personas del canal de voz, en la barra lateral. Plegada muestra un resumen; al pasar el ratón se despliega con cada persona.
+VoiceLog anota quién entra y quién sale del canal de voz donde estás, y a qué hora. Debajo de la gente del canal queda una barrita que casi no se nota; pasas el ratón y te sale la lista. Le das clic a alguien y se abre su perfil.
 
-Funciona en la aplicación de escritorio de Discord con **Vencord** o con **BetterDiscord** (ver [Versión para BetterDiscord](#versión-para-betterdiscord)).
+Sirve para **Vencord** y para **BetterDiscord** ([ver más abajo](#versión-para-betterdiscord)).
 
 ## Índice
 1. [Cómo funciona](#cómo-funciona)
