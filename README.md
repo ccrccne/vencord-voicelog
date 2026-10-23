@@ -6,6 +6,10 @@ VoiceLog anota quién entra y quién sale del canal de voz donde estás, y a qu�
 
 Sirve para **Vencord** y para **BetterDiscord** ([ver más abajo](#versión-para-betterdiscord)).
 
+![Kai entra a la llamada, sale a los dos segundos y queda en el historial](images/voicelog.gif)
+
+<sub>Demostración con nombres y fotos inventados.</sub>
+
 ## Índice
 1. [Cómo funciona](#cómo-funciona)
 2. [Limitaciones](#limitaciones)
@@ -155,6 +159,7 @@ vencord-voicelog/
 │   └── styles.css            # estilos de la barrita
 ├── betterdiscord/
 │   └── VoiceLog.plugin.js    # plugin para BetterDiscord
+├── images/                 # GIF de demostración
 ├── .gitignore
 └── README.md
 ```
