@@ -159,7 +159,7 @@ vencord-voicelog/
 │   └── styles.css            # estilos de la barrita
 ├── betterdiscord/
 │   └── VoiceLog.plugin.js    # plugin para BetterDiscord
-├── images/                 # GIF de demostración
+├── images/                   # GIF de demostración
 ├── .gitignore
 └── README.md
 ```
